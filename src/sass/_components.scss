@@ -1,7 +1,8 @@
 @use "variables";
+@use "sass:color";
 
 @mixin bg-loading{
-    background-color: darken(variables.$clr-primary, 10%);
+    background-color:lighten(variables.$clr-primary, 30%);
 }
 
 .loading{
@@ -37,3 +38,27 @@
         }
     }
 }
+.btn {
+    text-decoration: none;
+    color: white;
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition-duration: 0.5s;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+      0deg,
+      color.scale(variables.$clr-primary, $alpha: -10%) 0%,
+      color.scale(variables.$clr-secondary, $alpha: -10%) 100%
+    );
+    &:hover {
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(
+        0deg,
+        color.scale(variables.$clr-primary, $alpha: -15%) 0%,
+        color.scale(variables.$clr-secondary, $alpha: -15%) 100%
+      );
+    }
+  }

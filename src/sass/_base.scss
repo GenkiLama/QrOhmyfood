@@ -1,6 +1,10 @@
 @use "variables";
 @use "animations";
 
+@mixin box-shadow{
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
 *{
     margin:0;
     padding:0;
@@ -11,7 +15,104 @@ body{
     color:variables.$font-clr;
     font-size:16px;
     background-color: variables.$bg-color-primary;
+
+}
+.header{
+    height: 70px;
+    position:fixed;
+    width: 100%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+    background-color:white;
+    z-index: 100;
     display:flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    &__icon{
+        color:black;
+    }
+    &__arrow{
+        width:10%;
+        padding:1rem;
+    }
+    &__logo{
+        width: 80%;
+        text-align: center;
+        font-family: variables.$font-secondary;
+        font-size:2rem;
+    }
+}
+
+.location{
+    background-color:darken(variables.$bg-color-primary, 20%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    color:lighten(variables.$font-clr,10%);
+    font-weight: 900;
+    padding-top:85px;
+    &__icon{
+        margin-right: 1rem;
+    }
+}
+.cta{
+    text-align:center;
+    background-color:darken(variables.$bg-color-primary, 2%);
+    padding:2rem;
+    margin-bottom:2rem;
+    &__content{
+        font-weight: 300;
+        color:lighten(variables.$font-clr,10%);
+        font-size:1.2rem;
+        margin:.5rem 0;
+    }
+}
+
+.container{
+    display:flex;
+    padding:2rem 0;
+    flex-direction:column;
+}
+
+.how-to{
+    background-color: variables.$bg-color-primary;
+    padding:1rem;
+    &__card{
+        display:flex;
+        align-items: center;
+        width: 100%;
+        margin-top:1rem;
+        cursor: pointer;
+        &--icon{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding:.7rem .6rem;
+            background-color: variables.$clr-primary;
+            border-radius:50%;
+            color:white;
+            z-index:100;
+        }
+        &--body{
+            background-color:darken(variables.$bg-color-primary, 2%);
+            padding:1.5rem;
+            width: 100%;
+            border-radius:30px;
+            margin-left:-.75rem;
+            @include box-shadow;
+            transition-duration: .75s;
+            &__icon{
+                margin: 0 1.5rem;
+                transition-duration: 1s;
+            }
+            &__txt{
+                font-weight: 100;
+            }
+            &:hover{
+                background-color:lighten(variables.$clr-primary, 30%);
+                .how-to__card--body__icon{
+                    color:variables.$clr-primary;
+                }
+            }
+        }
+    }
 }
