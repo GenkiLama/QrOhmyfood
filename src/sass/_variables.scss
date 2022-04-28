@@ -11,4 +11,6 @@ $clr-tertiary:#99E2D0;
 $bg-color-primary:#FFF;
 $bg-color-secondary:#EAEAEA;
 
-  
+@mixin bg-strong-dark{
+    background-color:darken(variables.$bg-color-primary, 80%);
+}

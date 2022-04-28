@@ -1,9 +1,5 @@
 @use "variables";
 @use "animations";
-@use "components/header";
-@use "components/footer";
-@use "components/heart";
-@use "components/homeCard";
 
 *{
     margin:0;
@@ -13,4 +9,9 @@
 body{
     font-family:variables.$font-primary;
     color:variables.$font-clr;
+    font-size:16px;
+    background-color: variables.$bg-color-primary;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }

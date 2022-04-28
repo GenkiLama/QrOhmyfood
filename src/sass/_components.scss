@@ -1,0 +1,39 @@
+@use "variables";
+
+@mixin bg-loading{
+    background-color: darken(variables.$clr-primary, 10%);
+}
+
+.loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    @include bg-loading;
+    animation: loading 4s;
+    animation-delay: 2s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+    animation-fill-mode: forwards;
+    &__dot{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        animation: dot 1s;
+        margin:1rem;
+        &--1{
+            background-color:variables.$clr-primary;
+        }
+        &--2{
+            background-color:variables.$clr-secondary;
+            animation-delay: .5s;
+        }
+        &--3{
+            background-color:variables.$clr-tertiary;
+            animation-delay: 1s;
+        }
+    }
+}

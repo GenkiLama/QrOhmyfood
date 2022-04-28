@@ -2,11 +2,8 @@
 @use "base";
 @use "layout";
 @use "animations";
-@use "components/header";
-@use "components/footer";
-@use "components/heart";
-@use "components/homeCard";
-@use "components/menuCard";
+@use "utility";
+@use "components";
 @use "sass:color";
 
 @mixin box-shadow{

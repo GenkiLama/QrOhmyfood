@@ -1,0 +1,20 @@
+@keyframes loading{
+    100% {
+        z-index:-100;
+        opacity: 0;
+    }
+}
+@keyframes dot {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(.5rem);
+    }
+    50% {
+        transform: translateY(-.5rem);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
