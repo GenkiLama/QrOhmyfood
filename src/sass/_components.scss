@@ -82,7 +82,7 @@
         z-index:100;
     }
     &--body{
-        background-color:darken(variables.$bg-color-primary, 2%);
+        
         padding:1.5rem;
         width: 100%;
         border-radius:30px;
@@ -104,3 +104,67 @@
         }
     }
   }
+
+  .restaurant__card{
+    display:flex;
+    flex-direction: column;
+    text-decoration: none;
+    color:black;
+    width: 100%;
+    border-radius:20px;
+    @include box-shadow;
+    position: relative;
+    margin:1rem 0;
+    &--img{
+        object-fit: cover;
+        border-top-left-radius:20px;
+        border-top-right-radius: 20px;
+        height: 175px;
+    }
+    &--badge {
+      padding: 0.7rem 0.8rem;
+      border-radius: 5px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: variables.$clr-tertiary;
+      color: darken(variables.$clr-tertiary, 50%);
+    }
+    &--content{
+        display:flex;
+        justify-content: space-between;
+        padding:1rem;
+        &__txt{
+            &--location{
+                font-weight: 300;
+                font-size:.9rem;
+            }
+        }
+    }
+}
+
+.heart{
+    height: 2rem;
+    width: 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    background-color:transparent;
+    &__icon{
+        &--filled{
+          color:transparent;
+          background-image:linear-gradient(0deg, variables.$clr-primary 0%,variables.$clr-secondary 100%);
+          background-clip:text;
+          -webkit-background-clip: text;
+          opacity:0;
+          transition:.5s;
+          position:absolute;
+          top:0;
+          left:0;
+          &:hover{
+              opacity:1;
+          }
+      }
+    }
+}
