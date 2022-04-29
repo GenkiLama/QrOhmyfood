@@ -2,7 +2,7 @@
 @use "animations";
 
 @mixin box-shadow{
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
   }
 
 *{
@@ -28,6 +28,7 @@ h1{
     margin:0;
     font-size:1.5rem;
     font-weight: 900;
+    text-shadow: 1px 1px 1px;
     @media(min-width:992px){
         display:flex;
         justify-content: center;
@@ -44,7 +45,7 @@ h2{
     position:fixed;
     width: 100%;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
-    background-color:white;
+    background-color:variables.$bg-color-primary;
     z-index: 100;
     display:flex;
     align-items: center;
@@ -82,11 +83,13 @@ h2{
     background-color:darken(variables.$bg-color-primary, 2%);
     padding:2rem;
     margin-bottom:2rem;
+    h1{
+        margin:1rem 0;
+    }
     &__content{
         font-weight: 300;
         color:lighten(variables.$font-clr,10%);
         font-size:1.2rem;
-        margin:.5rem 0;
     }
 }
 

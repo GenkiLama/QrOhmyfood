@@ -45,11 +45,11 @@
 .btn {
     text-decoration: none;
     color: white;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     display: inline-block;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition-duration: 0.5s;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(
@@ -70,8 +70,11 @@
     display:flex;
     align-items: center;
     width: 100%;
-    margin-top:1rem;
+    margin-top:1.4rem;
     cursor: pointer;
+    &:first-child{
+        margin-top:-.5rem;
+    }
     @media(min-width:992px){
         width: 80%;
         margin:1rem auto;
@@ -81,7 +84,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        padding:.7rem .6rem;
+        padding:.8rem .7rem;
         background-color: variables.$clr-primary;
         border-radius:50%;
         color:white;
@@ -89,18 +92,20 @@
     }
     &--body{
         background-color:darken(variables.$bg-color-primary, 2%);
-        padding:1.5rem;
+        padding:1.75rem;
         width: 100%;
-        border-radius:30px;
+        border-radius:20px;
         margin-left:-.75rem;
         @include box-shadow;
         transition-duration: .75s;
         &__icon{
             margin: 0 1.5rem;
             transition-duration: 1s;
+            color:lighten(variables.$font-clr, 20%);
         }
         &__txt{
-            font-weight: 100;
+            font-weight: 600;
+            color:lighten(variables.$font-clr, 20%);
         }
         &:hover{
             background-color:lighten(variables.$clr-primary, 30%);
