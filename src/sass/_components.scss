@@ -82,7 +82,7 @@
         z-index:100;
     }
     &--body{
-        
+        background-color:darken(variables.$bg-color-primary, 2%);
         padding:1.5rem;
         width: 100%;
         border-radius:30px;
@@ -115,6 +115,9 @@
     @include box-shadow;
     position: relative;
     margin:1rem 0;
+    &:hover{
+        animation: flashing 1.5s;
+    }
     &--img{
         object-fit: cover;
         border-top-left-radius:20px;
