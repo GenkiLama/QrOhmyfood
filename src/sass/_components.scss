@@ -72,6 +72,11 @@
     width: 100%;
     margin-top:1rem;
     cursor: pointer;
+    @media(min-width:992px){
+        width: 80%;
+        margin:1rem auto;
+        text-align: center;
+    }
     &--icon{
         display:flex;
         justify-content: center;
@@ -118,6 +123,12 @@
     margin:1rem 0;
     &:hover{
         animation: flashing 1.5s;
+    }
+    @media(min-width:768px){
+        width: 45%;;
+    }
+    @media(min-width:992px){
+        width: 30%;;
     }
     &--img{
         object-fit: cover;
@@ -176,6 +187,12 @@
 .menu__list{
     padding:1rem;
     width: 100%;
+    @media(min-width:992px){
+        width: 45%;
+        &--hero{
+            width: 100%;
+        }
+    }
     &--title{
         text-transform: uppercase;
         position:relative;
