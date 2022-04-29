@@ -27,3 +27,12 @@
 		opacity: 1;
 	}
 }
+
+@keyframes popsIn {
+    0% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1)
+    }
+}

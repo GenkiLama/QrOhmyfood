@@ -1,30 +1,5 @@
 @use "variables";
 @use "base";
-@use "layout";
 @use "animations";
-@use "utility";
 @use "components";
 @use "sass:color";
-
-@mixin box-shadow{
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
-  }
-@mixin bg-light-dark{
-    background-color:darken(variables.$bg-color-primary, 20%);
-}
-@mixin bg-medium-dark{
-    background-color:darken(variables.$bg-color-primary, 40%);
-}
-@mixin bg-strong-dark{
-    background-color:darken(variables.$bg-color-primary, 80%);
-}
-@mixin bg-card-light{
-    background-color:lighten(variables.$clr-primary, 30%)
-}
-@mixin btn-gradient{
-    background-image: linear-gradient(
-      0deg,
-      color.scale(variables.$clr-primary, $alpha: -10%) 0%,
-      color.scale(variables.$clr-secondary, $alpha: -10%) 100%
-    );
-}
