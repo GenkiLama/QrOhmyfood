@@ -1,13 +1,8 @@
-@use "variables";
-@use "animations";
 @use "sass:color";
+@import "./animations";
+@import "./variables";
 
-@mixin bg-loading{
-    background-color:lighten(variables.$clr-primary, 35%);
-}
-@mixin box-shadow{
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
-  }
+
 
 .loading{
     position: fixed;
@@ -30,14 +25,14 @@
         animation: dot 1s;
         margin:10rem 1rem 1rem 1rem;
         &--1{
-            background-color:variables.$clr-primary;
+            background-color:$clr-primary;
         }
         &--2{
-            background-color:variables.$clr-secondary;
+            background-color:$clr-secondary;
             animation-delay: .5s;
         }
         &--3{
-            background-color:variables.$clr-tertiary;
+            background-color:$clr-tertiary;
             animation-delay: 1s;
         }
     }
@@ -54,15 +49,15 @@
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(
       0deg,
-      color.scale(variables.$clr-primary, $alpha: -10%) 0%,
-      color.scale(variables.$clr-secondary, $alpha: -10%) 100%
+      color.scale($clr-primary, $alpha: -10%) 0%,
+      color.scale($clr-secondary, $alpha: -10%) 100%
     );
     &:hover {
       box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
       background-image: linear-gradient(
         0deg,
-        color.scale(variables.$clr-primary, $alpha: -15%) 0%,
-        color.scale(variables.$clr-secondary, $alpha: -15%) 100%
+        color.scale($clr-primary, $alpha: -15%) 0%,
+        color.scale($clr-secondary, $alpha: -15%) 100%
       );
     }
   }
@@ -85,13 +80,13 @@
         justify-content: center;
         align-items: center;
         padding:.8rem .7rem;
-        background-color: variables.$clr-primary;
+        background-color: $clr-primary;
         border-radius:50%;
         color:white;
         z-index:100;
     }
     &--body{
-        background-color:darken(variables.$bg-color-primary, 2%);
+        background-color:darken($bg-color-primary, 2%);
         padding:1.75rem;
         width: 100%;
         border-radius:20px;
@@ -101,16 +96,16 @@
         &__icon{
             margin: 0 1.5rem;
             transition-duration: 1s;
-            color:lighten(variables.$font-clr, 20%);
+            color:lighten($font-clr, 20%);
         }
         &__txt{
             font-weight: 600;
-            color:lighten(variables.$font-clr, 20%);
+            color:lighten($font-clr, 20%);
         }
         &:hover{
-            background-color:lighten(variables.$clr-primary, 30%);
+            background-color:lighten($clr-primary, 30%);
             .how-to__card--body__icon{
-                color:variables.$clr-primary;
+                color:$clr-primary;
             }
         }
     }
@@ -147,8 +142,8 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      background-color: variables.$clr-tertiary;
-      color: darken(variables.$clr-tertiary, 50%);
+      background-color: $clr-tertiary;
+      color: darken($clr-tertiary, 50%);
     }
     &--content{
         display:flex;
@@ -175,7 +170,7 @@
     &__icon{
         &--filled{
           color:transparent;
-          background-image:linear-gradient(0deg, variables.$clr-primary 0%,variables.$clr-secondary 100%);
+          background-image:linear-gradient(0deg, $clr-primary 0%,$clr-secondary 100%);
           background-clip:text;
           -webkit-background-clip: text;
           opacity:0;
@@ -209,11 +204,11 @@
             top:1.3rem;
             width: 3rem;
             height: .3rem;
-            background:variables.$clr-tertiary;
+            background:$clr-tertiary;
         }
     }
     &--item{
-        background-color:variables.$bg-color-primary;
+        background-color:$bg-color-primary;
         border-radius:1rem;
         cursor: pointer;
         display:flex;
@@ -246,7 +241,7 @@
             font-weight: 900;
         }
         &__check{
-            background-color: variables.$clr-tertiary;
+            background-color: $clr-tertiary;
             justify-content: center;
             align-items: center;
             display: flex;
@@ -254,12 +249,12 @@
             margin-right:-100px;
             transition-duration: 1s;
             &--icon{
-                background-color:variables.$bg-color-primary;
+                background-color:$bg-color-primary;
                 border-radius:50%;
                 padding:12px 13px;
                 transition-duration:1s;
                 transition-timing-function:cubic-bezier(0,1.5,1,1.5);
-                color: variables.$clr-tertiary;
+                color: $clr-tertiary;
             }
         }
         &:hover &__check{

@@ -1,5 +1,5 @@
-@use "variables";
-@use "base";
-@use "animations";
-@use "components";
 @use "sass:color";
+@import "./base";
+@import "animations";
+@import "components";
+@import "variables";
