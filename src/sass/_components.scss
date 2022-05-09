@@ -198,6 +198,10 @@
         position:relative;
         margin-bottom: 1rem;
         font-weight: 300;
+        animation: popsIn 1s;
+        animation-timing-function: cubic-bezier(.4,1.38,.24,.92);
+        opacity:0;
+        animation-fill-mode: forwards;
         &::before{
             content:"";
             position:absolute;
