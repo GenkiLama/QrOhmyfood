@@ -83,7 +83,7 @@
         background-color: $clr-primary;
         border-radius:50%;
         color:white;
-        z-index:100;
+        z-index:10;
     }
     &--body{
         background-color:darken($bg-color-primary, 2%);
